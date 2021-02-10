@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Alice&family=Open+Sans&family=Prata&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+
+        <script>
+            $(function () {
+    $(window).on('scroll', function () {
+        if ( $(window).scrollTop() > 10 ) {
+            $('.navbar').addClass('active');
+        } else {
+            $('.navbar').removeClass('active');
+        }
+    });
+});
+
+        </script>
+       <style>   /*
+            *
+            * ==========================================
+            * CUSTOM UTIL CLASSES
+            * ==========================================
+            *
+            */
+            .navbar {
+                transition: all 0.4s;
+            }
+            
+            .navbar .nav-link {
+                color: #fff;
+            }
+            
+            .navbar .nav-link:hover,
+            .navbar .nav-link:focus {
+                color: #fff;
+                text-decoration: none;
+            }
+            
+            .navbar .navbar-brand {
+                color: #fff;
+            }
+            
+            
+            /* Change navbar styling on scroll */
+            .navbar.active {
+                background: #fff;
+                box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .navbar.active .nav-link {
+                color: #555;
+            }
+            
+            .navbar.active .nav-link:hover,
+            .navbar.active .nav-link:focus {
+                color: #555;
+                text-decoration: none;
+            }
+            
+            .navbar.active .navbar-brand {
+                color: #555;
+            }
+            
+            
+            /* Change navbar styling on small viewports */
+            @media (max-width: 991.98px) {
+                .navbar {
+                    background: #fff;
+                }
+            
+                .navbar .navbar-brand, .navbar .nav-link {
+                    color: #555;
+                }
+            }
+            .myButtonBlack {
+                background-color:#0a0a0a;
+                border:2px solid #ffffff;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 4px;
+                font-size:17px;
+                font-weight:bold;
+                padding:11px 24px;
+                margin-left: 15px;
+                text-decoration:none;
+            }
+            .myButtonBlack:hover {
+                background-color:#000000;
+                text-decoration:none;
+            }
+            .myButtonBlack:active {
+                position:relative;
+                top:1px;
+            }
+
+            .myButtonWhite {
+                background-color:#ffffff;
+                border:2px solid #000000;
+                display:inline-block;
+                cursor:pointer;
+                color:#000000;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 4px;
+                font-size:17px;
+                font-weight:900;
+                padding:16px 32px;
+                text-decoration:none;
+            }
+            .myButtonWhite:hover {
+                background-color:#000000;
+                text-decoration:none;
+                color:#ffffff;
+
+
+            }
+            .myButtonWhite:active {
+                position:relative;
+                top:1px;
+            }
+            .myButtonRed {
+                background-color:#ff0404;
+                border:2px solid #1a1a1a;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family: 'Open Sans', sans-serif;
+                letter-spacing: 4px;
+                font-size:17px;
+                font-weight:bold;
+                padding:16px 32px;
+                text-decoration:none;
+            }
+            .myButtonRed:hover {
+                background-color:#f24437;
+                text-decoration:none;
+                color:#ffffff;
+
+
+            }
+            .myButtonRed:active {
+                position:relative;
+                top:1px;
+            }
+
+            .contentHeader{
+                letter-spacing: 4px;
+                font-family: 'Cormorant Garamond', serif;
+            }
+            .aBorder{
+                border-bottom: solid white;
+                margin: 0px 4px;
+            }
+
+            .aBorder:hover{
+                border-bottom: solid rgb(90, 90, 90);
+                margin: 0px 4px;
+            }
+            .prize{
+                margin: 15px 0px;
+            }
+
+            p{
+                font-size: larger;
+            }
+
+
+
+
+        
+            
+            
+            /*
+            *
+            * ==========================================
+            * FOR DEMO PURPOSES
+            * ==========================================
+            *
+            */
+            .text-small {
+                font-size: 0.9rem !important;
+            }
+            
+            
+            body {
+                min-height: 110vh;
+
+                background-color: #F4F4F4;
+                font-family: 'Open Sans', sans-serif;
+
+
+            }
+            html {
+                scroll-behavior: smooth;
+                }
+            
+            
+        
+.view,body,html{height:100%}.navbar{background-color:rgba(0,0,0,.2)}.page-footer,.top-nav-collapse{background-color:#1C2331}@media only screen and (max-width:768px){.navbar{background-color:#1C2331}}</style>
+    </head>
+    <body style="background-color: #ffffff">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+<!-- Navbar-->
+<header class="header">
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
+        <a href="#" class="navbar-brand text-uppercase font-weight-bold justify-content-start"><img style="width: 90px;" src="logo-white.png"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+            
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item aBorder"><a href="#prizes" class="nav-link text-uppercase font-weight-bold">Prizes</a></li>
+                    <li class="nav-item aBorder"><a href="#deadline" class="nav-link text-uppercase font-weight-bold">Deadline</a></li>
+                    <li class="nav-item  aBorder"><a href="#about" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                </ul>
+            </div>
+            <a href="#" class="myButtonBlack">APPLY NOW</a>
+    </nav>
+</header>
+
+
+
+<div class="view" style="background-image: url('back.png'); background-repeat: no-repeat; background-size: cover; height:60% ;">
+    <div class="text-center text-white mx-5 wow fadeIn">
+        <h2 class="" style="padding-top: 170px; font-family: 'Prata', serif; letter-spacing:1px ;">Richard H. Driehaus Awards for Investigative Reporting</h2>
+        <h1 class="mb-4 display-2" style="font-family: 'Alice', serif; letter-spacing:9px;">
+          A Remedy For Wrong
+        </h1>
+
+        <a href="#" class="myButtonWhite">LEARN MORE</a>
+
+
+      </div>
+
+
+</div>
+
+<div class="container" style="background-color: #ffffff" >
+    <div class>
+        <div class="py-5 mt-5 text-center">
+            <h2 class="" style="letter-spacing: 5px;">Registration ends. </h1>
+            <h2 class="" style="letter-spacing: 5px;"> on March 12th. </h1>
+            <hr/>
+            <a href="#" class="myButtonRed">APPLY NOW</a>
+        </div>
+        <div class="py-5 mt-5 text-center" >
+            <h1 class="contentHeader" style="font-weight:bold" id="prizes">PRIZES</h1>
+            <div class="prize" style="font-size:150% ; letter-spacing: 3px;">1st Place - $15,000</div>
+            <div class="prize" style="font-size:150% ; letter-spacing: 3px;">2nd Place - $7,000</div>
+            <div class="prize" style="font-size:150% ; letter-spacing: 3px;">3rd Place - $4,000</div>
+
+        </div>
+        <div class="py-5 mt-5 text-center" id="deadline">
+            <h1 class="contentHeader" style="font-weight:bold">DEADLINE</h1>
+            <p>Entries must be submitted by Thursday, March 12th, 2020 — midnight into Friday. The 2020 Richard H. Driehaus Foundation Awards for Investigative Reporting are presented with the generous support of The Richard H. Driehaus Foundation. The Driehaus Foundation supports investigative reporting that fosters greater transparency, accountability, and effectiveness in government institutions at the local level.
+
+            </p>
+
+        </div>
+        <div class="py-5 mt-5 text-center" id="about">
+            <h1 class="contentHeader" style="font-weight:bold">ABOUT</h1>
+            <p>
+                The Better Government Association will present the Richard H. Driehaus Foundation Awards for Investigative Reporting in a virtual video ceremony at 4:30 p.m. Tuesday, July 14.
+            </p>
+            <p>
+               Judged by a rotating panel of journalists and media educators, the awards highlight the impact of Illinois investigative reporting as a reform tool within the context of state and local government waste, fraud and corruption.
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+        
+
+    </body>
+</html>
